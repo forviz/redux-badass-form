@@ -1,0 +1,40 @@
+import React, { Component, PropTypes } from 'react';
+import { PREFIX, styles } from './index';
+import { pureRender } from './utils';
+
+ class Value extends Component {
+
+  static propTypes = {
+    onDelete: PropTypes.func,
+    value: PropTypes.string,
+  }
+
+  handleDeleteValue = (e) => {
+    const { onDelete, value } = this.props;
+    e.stopPropagation();
+    onDelete(value);
+  }
+
+  renderValueItem = () => {
+    const isMultiValue = this.props.onDelete;
+    if (isMultiValue) {
+      return (
+        <div className={`${PREFIX}-value-item`}>
+          <span className={`${PREFIX}-value-delete`} onClick={this.handleDeleteValue}>×</span>
+          <span className={`${PREFIX}-value`}>{this.props.children}</span>
+        </div>
+      )
+    }
+    return this.props.children;
+  }
+
+  render() {
+    return (
+      <div className={`${PREFIX}-value-wrap`}>
+        {this.renderValueItem()}
+      </div>
+    );
+  }
+}
+
+export default pureRender(Value)
