@@ -77,7 +77,7 @@ module.exports = {
   // },
   resolve: {
     alias: {
-      'react-selectr': path.join(__dirname, 'src')
+      'redux-basass-form': path.join(__dirname, 'src')
     },
     extensions: ['.js']
   },

@@ -1,16 +1,16 @@
 {
-  "name": "react-selectr",
+  "name": "redux-basass-form",
   "version": "0.0.0-development",
   "description": "A select component for react, packed with power.",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/forviz/react-selectr.git"
+    "url": "git+https://github.com/forviz/redux-basass-form.git"
   },
   "bugs": {
-    "url": "https://github.com/forviz/react-selectr/issues"
+    "url": "https://github.com/forviz/redux-basass-form/issues"
   },
-  "homepage": "https://github.com/forviz/react-selectr",
+  "homepage": "https://github.com/forviz/redux-basass-form",
   "scripts": {
     "prepush": "npm run test",
     "commit": "git-cz",
